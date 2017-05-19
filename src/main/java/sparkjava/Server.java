@@ -12,7 +12,7 @@ import static spark.Spark.port;
 
 /**
  * 
- * @author ( ͡° ͜ʖ﻿ ͡°)
+ * @author
  *
  */
 public class Server {
