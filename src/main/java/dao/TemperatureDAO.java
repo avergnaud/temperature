@@ -33,7 +33,7 @@ public enum TemperatureDAO {
 	}
 	
 	/**
-	 * 2 jours de mesures prises toutes les 10 minutes : les 288 dernières mesures
+	 * 2 jours de mesures prises toutes les 10 minutes - les 288 dernieres mesures
 	 * */
 	@SuppressWarnings("unchecked")
 	public List<Temperature> readAll() {		
