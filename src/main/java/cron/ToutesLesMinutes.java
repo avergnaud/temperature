@@ -5,7 +5,7 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
 /**
- * 518400 relevés de température par an 1 par minute
+ * CRON
  */
 public enum ToutesLesMinutes {
 
@@ -14,7 +14,8 @@ public enum ToutesLesMinutes {
 	private final ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
 	
 	public void start() {
-		scheduler.scheduleAtFixedRate(new PriseDeTemperature(), 1, 1, TimeUnit.SECONDS);
+		/* toutes les 10 minutes en fait */
+		scheduler.scheduleAtFixedRate(new PriseDeTemperature(), 0, 10, TimeUnit.MINUTES);
 	}
 
 }

@@ -32,9 +32,13 @@ public enum TemperatureDAO {
 		}
 	}
 	
+	/**
+	 * 2 jours de mesures prises toutes les 10 minutes : les 288 dernières mesures
+	 * */
 	@SuppressWarnings("unchecked")
 	public List<Temperature> readAll() {		
-		Query query = em.createQuery("SELECT t FROM Temperature t order by t.ts asc");
+		Query query = em.createQuery("SELECT t FROM Temperature t order by t.ts desc")
+						.setMaxResults(288);
 	    return query.getResultList();
 	}
 }
