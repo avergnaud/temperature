@@ -22,8 +22,8 @@ public class PriseDeTemperature {
 		Temperature retour = new Temperature();
 
 		try {
-//			 List<String> liste = Files.readAllLines(Paths.get("/home/ubuntu/tmp"));
-			List<String> liste = Files.readAllLines(Paths.get("/sys/bus/w1/devices/28-051692238bff/w1_slave"));
+			 List<String> liste = Files.readAllLines(Paths.get("/home/ubuntu/tmp"));
+//			List<String> liste = Files.readAllLines(Paths.get("/sys/bus/w1/devices/28-051692238bff/w1_slave"));
 			String l2 = liste.get(1);
 			Matcher m = p.matcher(l2);
 			if (m.find()) {

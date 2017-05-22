@@ -4,7 +4,7 @@ import dao.TemperatureDAO;
 import model.Temperature;
 
 /**
- * Runnable qui insère la temperature actuelle en base
+ * Runnable qui insere la temperature actuelle en base
  */
 public class PriseDeTemperatureCommand implements Runnable {
 	
