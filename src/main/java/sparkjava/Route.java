@@ -4,6 +4,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
+import cron.PriseDeTemperature;
 import dao.TemperatureDAO;
 import model.Temperature;
 import spark.Request;
@@ -18,5 +19,10 @@ public class Route {
 		Collections.sort(temperatures, Comparator.comparing(Temperature::getTs));
 		
 		return temperatures;
+	}
+	
+	public static String handleGetActuelle(Request request, Response response) {
+		Temperature actuelle = PriseDeTemperature.actuelle();
+		return actuelle.getValeur() + "°C - " + actuelle.getTs().toString();
 	}
 }

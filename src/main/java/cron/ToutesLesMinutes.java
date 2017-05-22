@@ -15,7 +15,7 @@ public enum ToutesLesMinutes {
 	
 	public void start() {
 		/* toutes les 10 minutes en fait */
-		scheduler.scheduleAtFixedRate(new PriseDeTemperature(), 0, 10, TimeUnit.MINUTES);
+		scheduler.scheduleAtFixedRate(new PriseDeTemperatureCommand(), 0, 10, TimeUnit.MINUTES);
 	}
 
 }

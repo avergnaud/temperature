@@ -10,6 +10,10 @@
 	<script src="bower_components/jquery/dist/jquery.min.js"></script>
 	<script src="bower_components/chart.js/dist/Chart.min.js"></script>
 	
+	<h1 id="intro"></h1>
+	
+	<hr>
+	
 	<canvas id="myLineChart" width="740" height="300"></canvas>
 	
 
@@ -52,7 +56,20 @@
 	    });
 	  }
 
-	drawLineChart();
+
+	$( document ).ready(function() {
+	    console.log( "ready!" );
+		drawLineChart();
+
+		var jsonData = $.ajax({
+		      url: '/actuelle',
+		    }).done(function (results) {
+				$("h1#intro").html(results);
+		      
+		    });
+	});
+
+	
 	</script>
 
 </body>

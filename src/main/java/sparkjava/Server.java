@@ -30,6 +30,8 @@ public class Server {
 		// http://localhost:4567/getTemperatures
 		get("/getTemperatures", Route::handleGetTemperatures, gson::toJson);
 
+		get("/actuelle", Route::handleGetActuelle);
+		
 		// http://localhost:4567/hello
 		get("/hello", (req, res) -> "Hello World");
 	}
