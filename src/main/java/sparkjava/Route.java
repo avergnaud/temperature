@@ -23,6 +23,6 @@ public class Route {
 	
 	public static String handleGetActuelle(Request request, Response response) {
 		Temperature actuelle = PriseDeTemperature.actuelle();
-		return actuelle.getValeur() + "°C - " + actuelle.getTs().toString();
+		return actuelle.getValeur() + "&deg;C - " + actuelle.getTs().toString();
 	}
 }
